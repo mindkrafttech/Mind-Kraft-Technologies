@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Kraft – Figma Design Bootcamp</title>
+  <link rel="stylesheet" href="fig.css" />
+</head>
+<body>
+  <div class="sky">
+    <div class="sun"></div>
+    <div class="moon"></div>
+    <div class="stars"></div>
+  </div>
+
+  <header>
+    <h1>Mind Kraft Technologies</h1>
+    <p class="tagline">Design. Prototype. Inspire.</p>
+    <p class="subtext">Join our 1-week Figma Bootcamp starting at ₹299</p>
+    <p class="subtext">Not accepting registartion we will back soon</p>
+    <button class="cta">Start Designing</button>
+  </header>
+
+  <section class="course-list">
+    <h2>🖌️ What You'll Learn</h2>
+    <ul>
+      <li><a href="#">Figma Interface & Shortcuts</a></li>
+      <li><a href="#">Wireframes & Layouts</a></li>
+      <li><a href="#">Interactive Prototypes</a></li>
+      <li><a href="#">Design Systems & Components</a></li>
+      <li><a href="#">Team Collaboration in Figma</a></li>
+    </ul>
+  </section>
+
+  <section class="outcomes">
+    <h2>🎯 Course Outcomes</h2>
+    <p>By the end of this course, you'll be able to:</p>
+    <ul>
+      <li>Design responsive UI screens</li>
+      <li>Create clickable prototypes</li>
+      <li>Use auto layout and constraints</li>
+      <li>Build reusable components and styles</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <p>📞 +91 81222 88855 | ✉️ mindkrafttech@gmail.com</p>
+      <p class="qr-note">Scan QR to Register</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const sky = document.querySelector('.sky');
+      const sun = document.querySelector('.sun');
+      const moon = document.querySelector('.moon');
+      const stars = document.querySelector('.stars');
+
+      if (scrollY < 500) {
+        sky.style.background = 'linear-gradient(to bottom, #87ceeb, #f0e68c)';
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        stars.style.opacity = 0;
+      } else if (scrollY < 1000) {
+        sky.style.background = 'linear-gradient(to bottom, #f9d423, #ff4e50)';
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        stars.style.opacity = 0;
+      } else {
+        sky.style.background = 'linear-gradient(to bottom, #0f2027, #203a43, #2c5364)';
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+        stars.style.opacity = 0.5;
+      }
+    });
+  </script>
+</body>
+</html>
