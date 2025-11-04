@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mind Kraft – Photoshop Design Lab</title>
-  <link rel="stylesheet" href="ph.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-ph">
   <div class="sky">
     <div class="sun"></div>
     <div class="moon"></div>
@@ -17,11 +17,11 @@
     <h1>Mind Kraft Technologies</h1>
     <p class="tagline">Edit. Enhance. Express.</p>
     <button class="cta">Start Creating</button>
-    <p class="subtext">Not accepting registartion we will back soon</p>
+    <p class="subtext">Not accepting registration we will back soon</p>
   </header>
 
   <section class="course-list">
-    <h2>🎨 What You'll Learn</h2>
+    <h2>What You'll Learn</h2>
     <ul>
       <li><a href="#">Photoshop Interface & Tools</a></li>
       <li><a href="#">Layers, Masks & Blending Modes</a></li>
@@ -32,7 +32,7 @@
   </section>
 
   <section class="outcomes">
-    <h2>🎯 Course Outcomes</h2>
+    <h2>Course Outcomes</h2>
     <p>By the end of this course, you'll be able to:</p>
     <ul>
       <li>Edit and enhance photos professionally</li>
@@ -44,13 +44,36 @@
 
   <footer>
     <div class="contact-info">
-      <p>📞 +91 81222 88855 | ✉️ mindkrafttech@gmail.com</p>
+      <p>+91 81222 88855 | mindkrafttech@gmail.com</p>
       <p class="qr-note">Scan QR to Register</p>
     </div>
   </footer>
 
-  
-  
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const sky = document.querySelector('.sky');
+      const sun = document.querySelector('.sun');
+      const moon = document.querySelector('.moon');
+      const stars = document.querySelector('.stars');
+
+      if (scrollY < 500) {
+        sky.style.background = 'linear-gradient(to bottom, #87ceeb, #f0e68c)';
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        stars.style.opacity = 0;
+      } else if (scrollY < 1000) {
+        sky.style.background = 'linear-gradient(to bottom, #f9d423, #ff4e50)';
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        stars.style.opacity = 0;
+      } else {
+        sky.style.background = 'linear-gradient(to bottom, #0f2027, #203a43, #2c5364)';
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+        stars.style.opacity = 0.5;
+      }
+    });
   </script>
 </body>
 </html>
