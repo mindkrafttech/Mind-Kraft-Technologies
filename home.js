@@ -286,3 +286,46 @@ enrollForm.onsubmit = async e => {
   const rzp = new Razorpay(options);
   rzp.open();
 };
+
+
+
+// ====================== MOBILE SIDEBAR SCRIPT ======================
+document.addEventListener('DOMContentLoaded', () => {
+  const trigger = document.getElementById('mobileMenuTrigger');
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('mobileSidebarOverlay');
+  const closeBtn = document.getElementById('closeSidebar');
+
+  const openSidebar = () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    trigger.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeSidebar = () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    trigger.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  trigger?.addEventListener('click', openSidebar);
+  closeBtn?.addEventListener('click', closeSidebar);
+  overlay?.addEventListener('click', closeSidebar);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+      closeSidebar();
+    }
+  });
+
+  // Auto-highlight current page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+      link.classList.add('active');
+    }
+  });
+});
