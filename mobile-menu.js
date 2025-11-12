@@ -5,19 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMenu = document.getElementById("closeMenu");
 
   if (menuToggle && mobileMenu && closeMenu) {
+
+    // Toggle sidebar on hamburger click (open/close)
     menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.add("active");
-      document.body.style.overflow = "hidden"; // prevent background scroll
+      mobileMenu.classList.toggle("active");
+      document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "auto";
     });
 
+    // Close sidebar when clicking the × button
     closeMenu.addEventListener("click", () => {
       mobileMenu.classList.remove("active");
       document.body.style.overflow = "auto";
     });
 
-    // Close sidebar when clicking outside
+    // Close sidebar when clicking outside of it
     document.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      if (
+        mobileMenu.classList.contains("active") &&
+        !mobileMenu.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
         mobileMenu.classList.remove("active");
         document.body.style.overflow = "auto";
       }
