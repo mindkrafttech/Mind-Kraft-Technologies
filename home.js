@@ -3,48 +3,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ====================== MOBILE MENU TOGGLE ======================
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeBtn = mobileMenu?.querySelector('.close-btn');
-
-  if (hamburger && mobileMenu) {
-
-    // Open menu
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.add('active');
-      mobileMenu.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    // Close with X button
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    }
-
-    // Close when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  }
-
   // ====================== DAY-NIGHT SCROLL ANIMATION ======================
   const sun = document.getElementById('sun');
   const cloud = document.getElementById('cloud');
