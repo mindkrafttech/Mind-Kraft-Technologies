@@ -18,11 +18,11 @@
     <div id="stars"></div>
   </div>
 
-  <!-- ====================== HEADER ====================== -->
-<header class="site-header">
+<!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
+<header class="site-header desktop-only">
   <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
   <nav class="nav-menu">
-    <a href="index.html#home" class="nav-link active">Home</a>
+    <a href="index.html#home" class="nav-link">Home</a>
     <a href="index.html#services" class="nav-link">Services</a>
     <a href="index.html#testimonials" class="nav-link">Testimonials</a>
     <a href="products.html" class="nav-link">Products</a>
@@ -30,10 +30,9 @@
     <a href="courses.html" class="nav-link">Courses</a>
     <a href="blog.html" class="nav-link">Blog</a>
     <a href="about.html" class="nav-link">About</a>
-
-    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <!-- Dropdown Menu -->
     <div class="dropdown">
-      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <a href="#" class="nav-link dropbtn">More</a>
       <div class="dropdown-content">
         <a href="gallery.html">Gallery</a>
         <a href="privacy.html">Privacy Policy</a>
@@ -42,6 +41,35 @@
     </div>
   </nav>
 </header>
+
+<!-- ====================== MOBILE HEADER ====================== -->
+<header class="mobile-header">
+  <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</header>
+
+<!-- ====================== MOBILE SIDEBAR ====================== -->
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+
+  <a href="index.html#home">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#testimonials">Testimonials</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+  <a href="courses.html">Courses</a>
+  <a href="blog.html">Blog</a>
+  <a href="about.html">About</a>
+
+  <details>
+    <summary>More ▾</summary>
+    <a href="gallery.html">Gallery</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </details>
+</nav>
 
   <!-- ====================== BLOG ARTICLE ====================== -->
   <article class="container" style="max-width:800px; margin:6rem auto; padding:2rem; background:rgba(255,255,255,0.6); border-radius:20px;">
