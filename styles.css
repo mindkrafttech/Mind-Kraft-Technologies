@@ -192,53 +192,63 @@ body {
 }
 
 /* ====================== MOBILE SIDEBAR ====================== */
+/* === Make sidebar scrollable === */
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -240px;
-  width: 240px;
-  height: 100vh;
-  background: rgba(33,104,146,0.98);
-  backdrop-filter: blur(12px);
-  padding: 5rem 1.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: right 0.35s ease;
-  z-index: 1050;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  overflow-y: auto;        /* 🔥 enables scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #ffd14a transparent;
 }
-.mobile-menu.active { right: 0; }
 
-.mobile-menu .close-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: transparent;
-  border: none;
-  color: #ffd14a;
-  font-size: 1.8rem;
-  cursor: pointer;
-  padding: 5px;
+/* Optional – custom scrollbar for WebKit browsers */
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
 }
-.mobile-menu .close-btn:hover { color: white; }
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: #ffd14a;
+  border-radius: 3px;
+}
 
-.mobile-menu a {
+/* === Dropdown styles (for <details>) === */
+.mobile-menu details {
+  width: 100%;
+  text-align: center;
+  margin: 0.7rem 0;
+}
+
+.mobile-menu details summary {
   color: #ffd14a;
   font-size: 1.4rem;
   font-weight: 600;
-  text-decoration: none;
-  margin: 0.7rem 0;
+  list-style: none;
+  cursor: pointer;
   padding: 0.6rem 1rem;
-  width: 100%;
-  text-align: center;
   border-radius: 12px;
   transition: all 0.3s;
 }
-.mobile-menu a:hover {
+
+.mobile-menu details summary:hover {
   background: #ffd14a;
   color: #216892;
 }
+
+.mobile-menu details[open] summary {
+  background: #ffd14a;
+  color: #216892;
+}
+
+.mobile-menu details a {
+  display: block;
+  color: #fff9e6;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.4rem 0;
+  text-decoration: none;
+}
+
+.mobile-menu details a:hover {
+  color: #ffd14a;
+}
+
 
 /* ====================== HERO ====================== */
 .hero {
@@ -1820,7 +1830,7 @@ body {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1.0rem;
 }
 
 /* Ensure dropdown blends with nav */
@@ -2051,44 +2061,4 @@ body {
   .filter-btn { padding: 0.6rem 1.2rem; margin: 0.3rem; font-size: 0.9rem; }
   .gallery-grid { grid-template-columns: 1fr; }
   .lightbox-caption { font-size: 1rem; padding: 0.8rem 1.5rem; }
-}
-
-
-/* Basic Dropdown Styling */
-.dropdown {
-  position: relative;
-  display: block;
-}
-
-.dropbtn {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  font-size: 1rem;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding-left: 15px;
-}
-
-.dropdown-content a {
-  color: #ddd;
-  padding: 8px 0;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  color: #fff;
-}
-
-/* Show dropdown when active */
-.dropdown.active .dropdown-content {
-  display: flex;
 }
