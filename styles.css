@@ -192,53 +192,40 @@ body {
 }
 
 /* ====================== MOBILE SIDEBAR ====================== */
-/* === Make sidebar scrollable === */
-.mobile-menu {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ffd14a transparent;
-}
-.mobile-menu::-webkit-scrollbar {
-  width: 6px;
-}
-.mobile-menu::-webkit-scrollbar-thumb {
-  background: #ffd14a;
-  border-radius: 3px;
-}
-
-/* === Dropdown (More) section === */
-.mobile-menu details {
-  width: 100%;
-  text-align: center;
-  margin: 0.7rem 0;
-  border-radius: 12px;
-  background: #000; /* 🔥 Black background for More button */
-  overflow: hidden;
-}
-
-/* === Summary (More button) === */
+/* === Make <summary> (More button) look exactly like other links === */
 .mobile-menu details summary {
+  background: transparent;
   color: #ffd14a;
   font-size: 1.4rem;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
+  margin: 0.7rem 0;
   padding: 0.6rem 1rem;
+  width: 100%;
+  text-align: center;
   border-radius: 12px;
+  transition: all 0.3s;
   list-style: none;
-  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-/* Remove default arrow and style manually */
+/* Remove the default arrow marker */
 .mobile-menu details summary::-webkit-details-marker {
   display: none;
 }
 
-/* Add custom arrow */
+/* Add custom arrow to match your design */
 .mobile-menu details summary::after {
-  content: "▾";
-  margin-left: 6px;
-  font-size: 1.1rem;
+  content: " ▾";
+  font-size: 1rem;
   transition: transform 0.3s ease;
+}
+
+/* Hover and open effects (same as link hover) */
+.mobile-menu details summary:hover,
+.mobile-menu details[open] summary {
+  background: #ffd14a;
+  color: #216892;
 }
 
 /* Rotate arrow when open */
@@ -246,27 +233,18 @@ body {
   transform: rotate(180deg);
 }
 
-/* Hover and open effect */
-.mobile-menu details summary:hover,
-.mobile-menu details[open] summary {
-  background: #ffd14a;
-  color: #216892;
-}
-
-/* === Inner dropdown links === */
+/* Inner dropdown links */
 .mobile-menu details a {
   display: block;
   color: #fff9e6;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 0.4rem 0;
   text-decoration: none;
-  background: transparent;
+  margin: 0.4rem 0;
   padding: 0.4rem 1rem;
   border-radius: 8px;
   transition: color 0.3s;
 }
-
 .mobile-menu details a:hover {
   color: #ffd14a;
 }
