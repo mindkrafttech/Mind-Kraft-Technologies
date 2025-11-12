@@ -194,12 +194,10 @@ body {
 /* ====================== MOBILE SIDEBAR ====================== */
 /* === Make sidebar scrollable === */
 .mobile-menu {
-  overflow-y: auto;        /* 🔥 enables scrolling */
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #ffd14a transparent;
 }
-
-/* Optional – custom scrollbar for WebKit browsers */
 .mobile-menu::-webkit-scrollbar {
   width: 6px;
 }
@@ -208,34 +206,54 @@ body {
   border-radius: 3px;
 }
 
-/* === Dropdown styles (for <details>) === */
+/* === Dropdown (More) section === */
 .mobile-menu details {
   width: 100%;
   text-align: center;
   margin: 0.7rem 0;
+  border-radius: 12px;
+  background: #000; /* 🔥 Black background for More button */
+  overflow: hidden;
 }
 
+/* === Summary (More button) === */
 .mobile-menu details summary {
   color: #ffd14a;
   font-size: 1.4rem;
   font-weight: 600;
-  list-style: none;
   cursor: pointer;
   padding: 0.6rem 1rem;
   border-radius: 12px;
-  transition: all 0.3s;
+  list-style: none;
+  transition: all 0.3s ease;
 }
 
-.mobile-menu details summary:hover {
-  background: #ffd14a;
-  color: #216892;
+/* Remove default arrow and style manually */
+.mobile-menu details summary::-webkit-details-marker {
+  display: none;
 }
 
+/* Add custom arrow */
+.mobile-menu details summary::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.mobile-menu details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Hover and open effect */
+.mobile-menu details summary:hover,
 .mobile-menu details[open] summary {
   background: #ffd14a;
   color: #216892;
 }
 
+/* === Inner dropdown links === */
 .mobile-menu details a {
   display: block;
   color: #fff9e6;
@@ -243,6 +261,10 @@ body {
   font-weight: 500;
   margin: 0.4rem 0;
   text-decoration: none;
+  background: transparent;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: color 0.3s;
 }
 
 .mobile-menu details a:hover {
