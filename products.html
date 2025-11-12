@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products & Services | MIND KRAFT TECHNOLOGIES</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+  <!-- ====================== ANIMATED BACKGROUND ====================== -->
+  <div id="bg-animation">
+    <div id="sun"></div>
+    <div id="cloud"></div>
+    <div id="stars"></div>
+  </div>
+
+  <!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+  <nav class="nav-menu">
+    <a href="index.html#home" class="nav-link">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+    <a href="products.html" class="nav-link active">Products</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="courses.html" class="nav-link">Courses</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+
+    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <div class="dropdown">
+      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+  <!-- ====================== PRODUCTS HERO ====================== -->
+  <section class="products-hero">
+    <div class="container">
+      <h1>Premium Digital Solutions<br><span style="color:#ffd14a;">That Grow Your Business</span></h1>
+      <p>Custom websites, AI automation, and e-commerce platforms — starting at just <strong>₹49,999</strong></p>
+    </div>
+  </section>
+
+  <!-- ====================== PRODUCTS GRID ====================== -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid">
+
+        <!-- Product 1: Web Design -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Custom Web Design">
+          </div>
+          <div class="product-content">
+            <h3>Custom Web Design & Development</h3>
+            <p class="product-price">₹15,000 – ₹50,000</p>
+            <ul class="product-features">
+              <li>Ultra-fast, mobile-first design</li>
+              <li>Html, CSS, js, Wordpress</li>
+              <li>SEO + Google PageSpeed 95+</li>
+              <li>Free domain + hosting (1 year)</li>
+              <li>Live chat & analytics</li>
+            </ul>
+            <a href="contact.html?interest=Web+Design+Demo" class="demo-btn">
+              <i class="fas fa-play-circle"></i> Get Free Demo
+            </a>
+          </div>
+  </div>
+
+        <!-- Product 2: AI Automation -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1676299081408-27099a3e44e6?q=80&w=2070&auto=format&fit=crop" alt="AI & Automation">
+          </div>
+          <div class="product-content">
+            <h3>AI-Powered Automation Tools</h3>
+            <p class="product-price">₹20,000 – ₹70,000</p>
+            <ul class="product-features">
+              <li>AI Chatbot with WhatsApp</li>
+              <li>Auto lead capture & follow-up</li>
+              <li>Smart CRM + analytics dashboard</li>
+              <li>Voice AI & document automation</li>
+              <li>Automate your Business</li>
+            </ul>
+            <a href="contact.html?interest=AI+Automation+Demo" class="demo-btn">
+              <i class="fas fa-robot"></i> Get Free Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3: E-commerce -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop" alt="E-commerce Website">
+          </div>
+          <div class="product-content">
+            <h3>Full E-commerce Website + App</h3>
+            <p class="product-price">₹99,999 – ₹3,99,999</p>
+            <ul class="product-features">
+              <li>Razorpay / Stripe / COD</li>
+              <li>Inventory + order tracking</li>
+              <li>Abandoned cart recovery</li>
+              <li>Free marketing tools</li>
+            </ul>
+            <a href="contact.html?interest=E-commerce+Demo" class="demo-btn">
+              <i class="fas fa-shopping-cart"></i> Get Free Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== BIG CTA ====================== -->
+  <section class="products-cta">
+    <div class="container">
+      <h2>Ready to 10x Your Business in 2025?</h2>
+      <p>Book a <strong>free 30-minute live demo</strong> — see your custom solution in action!</p>
+      <a href="contact.html?interest=Free+Demo+Now" class="btn-primary big-demo-btn glow pulse">
+        <i class="fas fa-video"></i> Book Free Demo Call Now
+      </a>
+      <p style="margin-top: 2rem; opacity: 0.9;">
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== WHATSAPP FLOATING BUTTON ====================== -->
+  <section class="whatsapp-cta">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! I want a FREE demo for Web/AI/E-commerce" target="_blank" class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.446.099-.148.05-.272-.025-.396-.074-.124-.67-.297-.916-.297-.074 0-.198-.025-.297-.025-.297 0-1.256.149-1.554.446-.297.297-.893 1.256-.893 2.46 0 1.206.867 2.367 1.14 2.615.273.248 2.392 3.645 5.807 5.106 2.984 1.27 3.645.99 4.008.867.446-.149 1.42-.743 1.618-1.413.198-.669.198-1.24.149-1.364-.05-.124-.198-.198-.446-.297zM12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.525 1.333 5L2 22l5.182-1.333C9.475 21.513 11.18 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.392 16.382c-.198.297-.644.446-1.04.446-.446 0-1.413-.248-2.059-.743-.644-.496-1.413-1.19-1.91-1.91-.496-.719-.893-1.488-.893-2.307 0-.818.297-1.488.893-2.059.595-.57 1.364-.867 2.158-.867.793 0 1.562.297 2.158.867.595.57.893 1.24.893 2.059 0 .818-.298 1.587-.893 2.307-.595.719-1.364 1.413-2.158 1.91z"/></svg>
+      Instant Demo on WhatsApp
+    </a>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+      <p>Empowering innovation through technology & training.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
+      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
+      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- ====================== MOBILE MENU ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" aria-label="Close menu">×</button>
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="courses.html">Courses</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <!-- ====================== SCROLL TO TOP ====================== -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ====================== TECHY SEARCH ====================== -->
+  <div class="search-trigger" id="searchTrigger">
+    <div class="radar-circle"></div>
+    <div class="radar-circle"></div>
+    <i class="fas fa-search"></i>
+    <span>SEARCH</span>
+  </div>
+  <div class="search-modal" id="searchModal">
+    <div class="search-container">
+      <div class="search-header">
+        <i class="fas fa-terminal"></i>
+        <span>MIND KRAFT SEARCH</span>
+        <button class="close-search">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Search products, courses, blog..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- ====================== SCRIPT ====================== -->
+  <script src="home.js"></script>
+</body>
+</html>

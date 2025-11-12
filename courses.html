@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ✅ Favicon -->
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <title>Courses | MIND KRAFT TECHNOLOGIES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+<body>
+
+  <!-- ====================== ANIMATED BACKGROUND ====================== -->
+  <div id="bg-animation">
+    <div id="sun"></div>
+    <div id="cloud"></div>
+    <div id="stars"></div>
+  </div>
+
+  <!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+  <nav class="nav-menu">
+    <a href="index.html#home" class="nav-link">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="courses.html" class="nav-link active">Courses</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+
+    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <div class="dropdown">
+      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+  <!-- ====================== COURSES HERO ====================== -->
+  <section class="courses-hero">
+    <div class="container">
+      <h1 class="page-title">Our Tech Courses</h1>
+      <p class="page-subtitle">Job-ready training with live projects, mentorship & certifications</p>
+    </div>
+  </section>
+
+  <!-- ====================== COURSES GRID ====================== -->
+  <section class="courses-section">
+    <div class="container">
+      <div class="courses-grid">
+
+        <!-- Course 1 -->
+        <div class="course-card">
+          <div class="course-icon">Python</div>
+          <h3>Python course advanced</h3>
+          <p class="duration"><i class="fas fa-clock"></i>1 Month</p>
+          <p class="price">₹699</p>
+          <ul class="features">
+            <li>1 Month Course</li>
+            <li>Live projects</li>
+            <li>1-on-1 mentor sessions</li>
+            <li>Master Advanced Concepts</li>
+            <li>Project-Based Learning</li>
+            <li>Error Handling & Best Practices</li>
+            <li>Automation & Scripting</li>
+            <li>Career Boost</li>
+          </ul>
+          <a href="#" class="btn-primary enroll-btn" 
+             data-course="Python" 
+             data-price="699">Enroll Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== WHATSAPP CTA ====================== -->
+  <section class="whatsapp-cta">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=I%20have%20a%20question%20about%20courses" target="_blank" class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.446.099-.148.05-.272-.025-.396-.074-.124-.67-.297-.916-.297-.074 0-.198-.025-.297-.025-.297 0-1.256.149-1.554.446-.297.297-.893 1.256-.893 2.46 0 1.206.867 2.367 1.14 2.615.273.248 2.392 3.645 5.807 5.106 2.984 1.27 3.645.99 4.008.867.446-.149 1.42-.743 1.618-1.413.198-.669.198-1.24.149-1.364-.05-.124-.198-.198-.446-.297zM12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.525 1.333 5L2 22l5.182-1.333C9.475 21.513 11.18 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.392 16.382c-.198.297-.644.446-1.04.446-.446 0-1.413-.248-2.059-.743-.644-.496-1.413-1.19-1.91-1.91-.496-.719-.893-1.488-.893-2.307 0-.818.297-1.488.893-2.059.595-.57 1.364-.867 2.158-.867.793 0 1.562.297 2.158.867.595.57.893 1.24.893 2.059 0 .818-.298 1.587-.893 2.307-.595.719-1.364 1.413-2.158 1.91z"/></svg>
+      Ask About Courses
+    </a>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+      <p>Empowering innovation through technology & training.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
+      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
+      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- ====================== MOBILE SIDEBAR ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" aria-label="Close menu">×</button>
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="courses.html">Courses</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#testimonials">Testimonials</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ====================== SCROLL TO TOP ====================== -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ====================== TECHY SEARCH BUTTON + MODAL ====================== -->
+  <div class="search-trigger" id="searchTrigger">
+    <div class="radar-circle"></div>
+    <div class="radar-circle"></div>
+    <i class="fas fa-search"></i>
+    <span>SEARCH</span>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-container">
+      <div class="search-header">
+        <i class="fas fa-terminal"></i>
+        <span>MIND KRAFT SEARCH</span>
+        <button class="close-search">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type to search courses, blog, services..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+<!-- ====================== ENROLLMENT POPUP ====================== -->
+<div class="enroll-modal" id="enrollModal">
+  <div class="enroll-container">
+    <button class="close-enroll">×</button>
+    
+    <div class="enroll-header">
+      <i class="fas fa-graduation-cap"></i>
+      <h2>Secure Your Seat</h2>
+      <p id="selectedCourse">Course: Loading...</p>
+    </div>
+
+    <form id="enrollForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="mobile" placeholder="Mobile Number" required />
+      
+      <!-- ENHANCED SELECT WITH CUSTOM PLACEHOLDER STYLING -->
+      <div class="select-wrapper">
+        <select name="profession" required id="professionSelect">
+          <option value="" disabled selected>Your Profession</option>
+          <option value="Student">Student</option>
+          <option value="Working Professional">Working Professional</option>
+          <option value="Freelancer">Freelancer</option>
+          <option value="Business Owner">Business Owner</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="price-box">
+        <span>Course Fee:</span>
+        <strong id="displayPrice">₹24,999</strong>
+      </div>
+
+      <button type="submit" class="pay-btn">
+        <i class="fas fa-lock"></i> Pay Now & Enroll
+      </button>
+    </form>
+
+    <div class="success-message" id="successMessage" style="display:none;">
+      <i class="fas fa-check-circle"></i>
+      <h3>Enrollment Successful!</h3>
+      <p>Check your email for confirmation.</p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ====================== SCRIPT ====================== -->
+  <script src="home.js"></script>
+</body>
+</html>

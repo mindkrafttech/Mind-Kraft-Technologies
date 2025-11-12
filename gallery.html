@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | MIND KRAFT TECHNOLOGIES</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+  <nav class="nav-menu">
+    <a href="index.html#home" class="nav-link">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="courses.html" class="nav-link">Courses</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+
+    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <div class="dropdown">
+      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+  <!-- ====================== GALLERY HERO ====================== -->
+  <section class="gallery-hero">
+    <div class="container">
+      <h1>Our Journey in Pictures</h1>
+      <p>Certificate Distributions • Client Meetings • Team Events • Success Stories</p>
+    </div>
+  </section>
+
+  <!-- ====================== FILTER TABS ====================== -->
+  <section class="gallery-filters">
+    <div class="container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="certificates">Certificates</button>
+      <button class="filter-btn" data-filter="clients">Client Meets</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="team">Team</button>
+    </div>
+  </section>
+
+  <!-- ====================== GALLERY GRID ====================== -->
+  <section class="gallery-grid-section">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- CERTIFICATES -->
+        <div class="gallery-item" data-category="certificates">
+          <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=800" alt="Certificate Distribution">
+          <div class="overlay">
+            <h3>Python Bootcamp 2025</h3>
+            <p>100+ Students Certified</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="certificates">
+          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800" alt="AI Certification">
+          <div class="overlay">
+            <h3>AI & Automation</h3>
+            <p>Top Performers Awarded</p>
+          </div>
+        </div>
+
+        <!-- CLIENT MEETS -->
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800" alt="Client Meeting">
+          <div class="overlay">
+            <h3>Arjun Stores</h3>
+            <p>E-commerce Launch</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="clients">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800" alt="Client Handshake">
+          <div class="overlay">
+            <h3>New Partnership</h3>
+            <p>Tech CRM Deal Signed</p>
+          </div>
+        </div>
+
+        <!-- EVENTS -->
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800" alt="Tech Workshop">
+          <div class="overlay">
+            <h3>React Masterclass</h3>
+            <p>Live Coding Session</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1505373877841-8d25f771d0b7?q=80&w=800" alt="Hackathon">
+          <div class="overlay">
+            <h3>24-Hour Hackathon</h3>
+            <p>50+ Teams</p>
+          </div>
+        </div>
+
+        <!-- TEAM -->
+        <div class="gallery-item" data-category="team">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800" alt="Team Photo">
+          <div class="overlay">
+            <h3>MIND KRAFT Team</h3>
+            <p>Founded 2025</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="team">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800" alt="Team Celebration">
+          <div class="overlay">
+            <h3>1st Anniversary</h3>
+            <p>Celebrating Growth</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== LIGHTBOX MODAL ====================== -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img src="" alt="" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ====================== WHATSAPP FLOAT ====================== -->
+  <section class="whatsapp-cta">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! I saw your gallery – let's discuss my project!" target="_blank" class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" class="wa-icon">...</svg>
+      Chat on WhatsApp
+    </a>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+      <p>Empowering innovation through technology & training.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
+      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
+      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- ====================== SCRIPTS ====================== -->
+  <script src="home.js"></script>
+  <script src="crow.js"></script>
+  <script>
+    // FILTER GALLERY
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'block';
+            setTimeout(() => item.style.opacity = '1', 50);
+          } else {
+            item.style.opacity = '0';
+            setTimeout(() => item.style.display = 'none', 300);
+          }
+        });
+      });
+    });
+
+    // LIGHTBOX
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const caption = document.getElementById('lightboxCaption');
+        lightboxImg.src = img.src;
+        caption.innerHTML = img.parentElement.querySelector('.overlay').innerHTML;
+        lightbox.classList.add('active');
+      });
+    });
+
+    document.querySelector('.close-lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').classList.remove('active');
+    });
+
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target === this) {
+        this.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

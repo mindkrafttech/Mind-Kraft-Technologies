@@ -1,79 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mind Kraft Technologies</title>
+  <title>MIND KRAFT TECHNOLOGIES</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="page-home">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ====================== ANIMATED BACKGROUND ====================== -->
   <div id="bg-animation">
     <div id="sun"></div>
     <div id="cloud"></div>
     <div id="stars"></div>
   </div>
-
-  <div class="content">
-    <header>
-      <h1>Mind Kraft Technologies</h1>
-      <h2>Learn. Build. Succeed.</h2>
-      <button class="btn">Explore Courses</button>
-    </header>
-
-    <section class="courses-list">
-      <a class="course-item" href="python.html">Python</a>
-      <a class="course-item" href="mc.html">Machine Learning</a>
-      <a class="course-item" href="ph.html">Photoshop</a>
-      <a class="course-item" href="fi.html">Figma</a>
-    </section>
-
-    <section class="session-block" id="about">
-      <h2>About Us</h2>
-      <div class="about-row">
-        <div class="about-item fade-up">
-          <p><strong>Founded:</strong> 2025 by Sachin S B</p>
-          <p>MIND KRAFT TECHNOLOGIES is a forward-thinking IT and software solutions company.</p>
-        </div>
-        <div class="about-item fade-up">
-          <p><strong>Focus:</strong> Digital services, internships, and training programs that empower individuals and businesses.</p>
-        </div>
-        <div class="about-item fade-up">
-          <p><strong>Mission:</strong> To empower minds through technology — creating opportunities to learn, build, and innovate.</p>
-        </div>
-        <div class="about-item fade-up">
-          <p><strong>Vision:</strong> To become a leading hub for IT excellence and innovation.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="session-block">
-      <h2>What We Do</h2>
-      <div class="services-row">
-        <div class="service-item">Web Development & Design</div>
-        <div class="service-item">Software Solutions & Automation</div>
-        <div class="service-item">Internship and Training Programs</div>
-        <div class="service-item">AI & Emerging Tech Learning Modules</div>
-        <div class="service-item">IT Consulting & Technical Support</div>
-      </div>
-    </section>
-
-    <section class="session-block">
-      <h2>Why Choose Us</h2>
-      <div class="benefits-row">
-        <div class="benefit-item">Real-world project experience during internships</div>
-        <div class="benefit-item">Hands-on training from experienced professionals</div>
-        <div class="benefit-item">Tailored solutions for startups and enterprises</div>
-        <div class="benefit-item">Continuous innovation and quality service delivery</div>
-      </div>
-    </section>
-
-    <footer class="contact-info">
-      <span>+91 81222 88855</span> |
-      <span>mindkrafttech@gmail.com</span>
-      <div>Scan QR to Register</div>
-    </footer>
+  <!-- ====================== CLIENT ATTRACTION POPUP ====================== -->
+  <div class="client-popup" id="clientPopup">
+    <div class="popup-content">
+      <span class="close-popup" onclick="document.getElementById('clientPopup').classList.remove('active')">&times;</span>
+      <h2>Ready to 10x Your Business in 2025?</h2>
+      <p>Get a <strong>FREE Website + AI Automation Demo</strong> worth ₹50,000 – Limited Slots!</p>
+      <a href="products.html" class="popup-btn">Get My Free Demo Now</a>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+<!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+  <nav class="nav-menu">
+    <a href="index.html#home" class="nav-link active">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="courses.html" class="nav-link">Courses</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+
+    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <div class="dropdown">
+      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+  <!-- ====================== HERO ====================== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Empowering Innovation Through<br>
+        <span class="highlight">Technology & Training</span>
+      </h1>
+      <p class="hero-subtitle">Building tomorrow’s tech leaders, one project at a time.</p>
+      <div class="cta-group">
+        <a href="products.html" class="btn-primary pulse">Explore Services</a>
+        <a href="courses.html" class="btn-primary outline pulse">Enroll in Course</a>
+        <a href="#projects" class="btn-primary glow pulse">Get a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== INTRO ====================== -->
+  <section class="intro-section">
+    <div class="container">
+      <p class="intro-text">
+        <strong>MIND KRAFT TECHNOLOGIES</strong> – Founded in 2025 by <em>CEO S.B. Sachin</em>, we blend cutting-edge development with hands-on training to shape future innovators.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== SERVICES WITH ICONS ====================== -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Core Services</h2>
+      <div class="services-row">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p><strong>Launch a website that works as hard as you do.</strong> Blazing-fast, mobile-first, React & Node.js powered.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-commerce Websites</h3>
+          <p><strong>Turn browsers into buyers.</strong> Secure stores with Razorpay, inventory & global shipping.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Tech Courses</h3>
+          <p><strong>Master tomorrow’s tech today.</strong> Live projects, mentorship, job-ready certifications.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Business Solutions</h3>
+          <p><strong>Scale smarter, not harder.</strong> Custom CRM, ERP, automation workflows.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-robot"></i></div>
+          <h3>AI & Automation</h3>
+          <p><strong>Work smart.</strong> AI chatbots, auto-followups, smart dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== TESTIMONIALS ====================== -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">What They Say</h2>
+      <div class="testimonials-row">
+        <div class="testimonial-card">
+          <p class="quote">“Good Trainer and learned python basics in 1 week”</p>
+          <p class="author">— <strong>Naveenkumar A</strong>, Course Participant</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">“Best Figma course I’ve taken – live projects made all the difference.”</p>
+          <p class="author">— <strong>Nivetha</strong>, Course Participant</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">“Learned python in the best place”</p>
+          <p class="author">— <strong>Tapaswini P J</strong>, Course Participant</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== WHATSAPP CTA ====================== -->
+  <section class="whatsapp-cta">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! I want to grow my business with your services" target="_blank" class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" class="wa-icon">...</svg>
+      Chat on WhatsApp
+    </a>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+      <p>Empowering innovation through technology & training.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
+      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
+      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- ====================== MOBILE SIDEBAR ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" aria-label="Close menu">×</button>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="courses.html">Courses</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <!-- ====================== SCROLL TO TOP ====================== -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ====================== TECHY SEARCH ====================== -->
+  <div class="search-trigger" id="searchTrigger">
+    <div class="radar-circle"></div>
+    <div class="radar-circle"></div>
+    <i class="fas fa-search"></i>
+    <span>SEARCH</span>
+  </div>
+  <div class="search-modal" id="searchModal">
+    <div class="search-container">
+      <div class="search-header">
+        <i class="fas fa-terminal"></i>
+        <span>MIND KRAFT SEARCH</span>
+        <button class="close-search">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Search services, courses..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- ====================== FLOATING ACTION BUTTONS ====================== -->
+  <div class="fab-container">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! Let's grow my business!" target="_blank" class="fab-btn fab-whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+918122288855" class="fab-btn fab-call">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="products.html" class="fab-btn fab-demo">
+      <i class="fas fa-rocket"></i>
+    </a>
+  </div>
+
+      <!-- ====================== SCRIPTS ====================== -->
+  <script src="mindkraft-loader.js"></script>
+  <script src="home.js"></script>
+
+  <script>
+    // ONLY RUN POPUP IF LOADER WAS SHOWN THIS SESSION
+    window.triggerMindKraftPopup = function() {
+      if (sessionStorage.getItem('mindkraft_popup_shown')) return;
+
+      const popup = document.getElementById('clientPopup');
+      if (popup) {
+        popup.classList.add('active');
+        sessionStorage.setItem('mindkraft_popup_shown', 'true');
+      }
+
+      // PARTICLE BURST
+      for(let i = 0; i < 90; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.top = Math.random() * 100 + 'vh';
+        p.style.background = ['#d400ff', '#216892', '#ffd14a', '#25D366'][Math.floor(Math.random()*4)];
+        p.style.width = p.style.height = Math.random() * 14 + 8 + 'px';
+        p.style.borderRadius = '50%';
+        p.style.boxShadow = '0 0 25px currentColor';
+        p.style.animation = `explode 3.5s ease-out forwards`;
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 4000);
+      }
+    };
+
+    // CLOSE POPUP
+    document.getElementById('clientPopup')?.addEventListener('click', function(e) {
+      if (e.target === this || e.target.classList.contains('close-popup')) {
+        this.classList.remove('active');
+      }
+    });
+
+    // ADD EXPLOSION ANIMATION
+    if (!document.getElementById('explode-style')) {
+      const style = document.createElement('style');
+      style.id = 'explode-style';
+      style.textContent = `
+        @keyframes explode {
+          0% { transform: scale(0) translateY(0); opacity: 1; }
+          70% { transform: scale(3) translateY(-50px); opacity: 0.8; }
+          100% { transform: scale(5) translateY(-200px); opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    // FALLBACK: IF LOADER NOT PRESENT (e.g. direct refresh)
+    if (!sessionStorage.getItem('mindkraft_loader_shown')) {
+      sessionStorage.setItem('mindkraft_loader_shown', 'true');
+      setTimeout(() => {
+        if (!sessionStorage.getItem('mindkraft_popup_shown')) {
+          window.triggerMindKraftPopup();
+        }
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
 </body>
 </html>

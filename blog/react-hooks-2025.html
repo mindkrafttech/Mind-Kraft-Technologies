@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to MIND KRAFT TECHNOLOGIES | Empowering Innovation 2025</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div id="bg-animation">
+    <div id="sun"></div>
+    <div id="cloud"></div>
+    <div id="stars"></div>
+  </div>
+
+  <!-- ====================== HEADER ====================== -->
+<header class="site-header">
+  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+  <nav class="nav-menu">
+    <a href="index.html#home" class="nav-link active">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="courses.html" class="nav-link">Courses</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="about.html" class="nav-link">About</a>
+
+    <!-- 🔽 Dropdown Menu (Now perfectly styled like nav links) -->
+    <div class="dropdown">
+      <a href="#" class="nav-link dropbtn">More ▾</a>
+      <div class="dropdown-content">
+        <a href="gallery.html">Gallery</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="hamburger" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+  <!-- ====================== BLOG ARTICLE ====================== -->
+  <article class="container" style="max-width:800px; margin:6rem auto; padding:2rem; background:rgba(255,255,255,0.6); border-radius:20px;">
+    <h1>Welcome to MIND KRAFT TECHNOLOGIES 🚀</h1>
+    <p class="meta"><i class="fas fa-calendar"></i> November 10, 2025 • 4 min read</p>
+    <img src="../assets/blog/blog1.jpg" alt="MIND KRAFT TECHNOLOGIES" style="width:100%; border-radius:12px; margin:1.5rem 0;">
+
+    <p>Welcome to <strong>MIND KRAFT TECHNOLOGIES</strong> — a place where <span style="color:#d400ff;font-weight:bold;">creativity meets technology</span>, and ideas turn into real-world innovations. Whether you're a student eager to learn, a startup ready to scale, or a company looking for cutting-edge tech solutions — you're in the right place.</p>
+
+    <p>Founded in <strong>2025</strong> by <strong>S.B. Sachin</strong>, our mission is simple yet powerful — to empower every individual and business with smart, modern, and AI-driven solutions that make growth inevitable.</p>
+
+    <h2>For Students 🎓</h2>
+    <p>We don’t just teach — we transform learners into creators. Through our <strong>hands-on internships</strong> and <strong>real client projects</strong>, you’ll gain the experience and confidence needed to work in the tech industry. From Python and React to AI and Automation — you’ll work on live, impactful projects.</p>
+
+    <h2>For Businesses 💼</h2>
+    <p>Need a website that performs? A custom CRM that automates? Or an AI system that works 24/7? We’ve got you covered. At MIND KRAFT, we design solutions that <strong>grow with your goals</strong> — from startups to established enterprises. Our focus: performance, automation, and modern design.</p>
+
+    <h2>For Collaborators & Partners 🤝</h2>
+    <p>We believe collaboration sparks innovation. If you're a college, training institute, or corporate partner who wants to offer internships or digital upskilling programs, let's build the future together.</p>
+
+    <blockquote style="border-left:4px solid #ffd14a; padding-left:1rem; margin:1.5rem 0; font-style:italic;">
+      “We’re not just creating developers — we’re creating innovators who lead with technology.”
+    </blockquote>
+
+    <p>Thank you for being part of our growing community. The journey has just begun, and the future looks bright with minds like yours. Follow our <a href="../blog.html" style="color:#216892;font-weight:bold;">blog</a> to stay updated with the latest in tech, innovation, and learning.</p>
+
+    <a href="../blog.html" style="color:#216892; font-weight:bold;">← Back to Blog</a>
+  </article>
+
+  <!-- ====================== SEARCH BUTTON ====================== -->
+  <div class="search-trigger" id="searchTrigger">
+    <div class="radar-circle"></div>
+    <div class="radar-circle"></div>
+    <i class="fas fa-search"></i>
+    <span>SEARCH</span>
+  </div>
+
+  <!-- ====================== SEARCH MODAL ====================== -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-container">
+      <div class="search-header">
+        <i class="fas fa-terminal"></i>
+        <span>MIND KRAFT SEARCH</span>
+        <button class="close-search">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type to search courses, blog, services..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../home.js"></script>
+</body>
+</html>
