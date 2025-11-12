@@ -2052,3 +2052,43 @@ body {
   .gallery-grid { grid-template-columns: 1fr; }
   .lightbox-caption { font-size: 1rem; padding: 0.8rem 1.5rem; }
 }
+
+
+/* Basic Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropbtn {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-left: 15px;
+}
+
+.dropdown-content a {
+  color: #ddd;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #fff;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-content {
+  display: flex;
+}
