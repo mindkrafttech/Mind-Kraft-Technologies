@@ -227,7 +227,7 @@ enrollForm.onsubmit = async e => {
   };
 
   const options = {
-    key: "rzp_test_RdGflwTWFSMqoJ",
+    key: "rzp_test_RgplQiBPRvcKjm",
     amount: currentPrice * 100,
     currency: "INR",
     name: "MIND KRAFT TECHNOLOGIES",
