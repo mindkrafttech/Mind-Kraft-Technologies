@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-DJ2X3MDF1S');
-</script>
+    gtag('config', 'G-DJ2X3MDF1S');
+  </script>
 
   <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
   <meta charset="UTF-8" />
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Google’s Gemini 3 — Rising as a Leading AI Force | MIND KRAFT TECHNOLOGIES</title>
-  <meta name="description" content="Google’s Gemini 3 is emerging as one of the most powerful AI models of 2025, offering multimodal understanding, real-time reasoning and business automation for the future.">
-  <meta name="keywords" content="Google Gemini 3, Gemini AI, Google AI 2025, multimodal AI, real-time AI, business automation, AI model, artificial intelligence news">
+  <title>Google’s Gemini 3 — Rising as a Leading AI Force | MIND KRAFT TECHNOLOGIES | Mind Kraft Technologies</title>
+  <link rel="canonical" href="https://www.mindkrafttech.com/blog/gemini-3-ai.html">
+  <meta name="description"
+    content="Google’s Gemini 3 is emerging as one of the most powerful AI models of 2025, offering multimodal understanding, real-time reasoning and business automation for the future.">
+  <meta name="keywords"
+    content="Google Gemini 3, Gemini AI, Google AI 2025, multimodal AI, real-time AI, business automation, AI model, artificial intelligence news">
   <meta name="robots" content="index,follow">
 
   <link rel="stylesheet" href="../styles.css" />
@@ -29,7 +37,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "BlogPosting",
     "headline": "Google’s Gemini 3 — Rising as a Leading AI Force",
     "author": { "@type": "Person", "name": "S.B. Sachin" },
     "publisher": { "@type": "Organization", "name": "MIND KRAFT TECHNOLOGIES" },
@@ -44,6 +52,7 @@
   }
   </script>
 </head>
+
 <body>
 
   <!-- Animated Background -->
@@ -53,84 +62,102 @@
     <div id="stars"></div>
   </div>
 
-<!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
-<header class="site-header desktop-only">
-  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
-  <nav class="nav-menu">
-    <a href="index.html#home" class="nav-link">Home</a>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
-    <a href="products.html" class="nav-link">Products</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="courses.html" class="nav-link">Courses</a>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="about.html" class="nav-link">About</a>
-    <!-- Dropdown Menu -->
-    <div class="dropdown">
-      <a href="#" class="nav-link dropbtn">More</a>
-      <div class="dropdown-content">
-        <a href="gallery.html">Gallery</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
+  <!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
+  <header class="site-header desktop-only">
+    <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+    <nav class="nav-menu">
+      <a href="../index.html#home" class="nav-link">Home</a>
+      <a href="../index.html#services" class="nav-link">Services</a>
+      <a href="../index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="../products.html" class="nav-link">Products</a>
+      <a href="../contact.html" class="nav-link">Contact</a>
+      <a href="../courses.html" class="nav-link">Courses</a>
+      <a href="../blog.html" class="nav-link">Blog</a>
+      <a href="../about.html" class="nav-link">About</a>
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#" class="nav-link dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="../gallery.html">Gallery</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms & Conditions</a>
+        </div>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <!-- ====================== MOBILE HEADER ====================== -->
+  <header class="mobile-header">
+    <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- ====================== MOBILE SIDEBAR ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+
+    <a href="../index.html#home">Home</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#testimonials">Testimonials</a>
+    <a href="../products.html">Products</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../courses.html">Courses</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../about.html">About</a>
+
+    <details>
+      <summary>More ▾</summary>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms & Conditions</a>
+    </details>
   </nav>
-</header>
-
-<!-- ====================== MOBILE HEADER ====================== -->
-<header class="mobile-header">
-  <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-    <i class="fas fa-bars"></i>
-  </button>
-</header>
-
-<!-- ====================== MOBILE SIDEBAR ====================== -->
-<nav class="mobile-menu" id="mobileMenu">
-  <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
-
-  <a href="index.html#home">Home</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#testimonials">Testimonials</a>
-  <a href="products.html">Products</a>
-  <a href="contact.html">Contact</a>
-  <a href="courses.html">Courses</a>
-  <a href="blog.html">Blog</a>
-  <a href="about.html">About</a>
-
-  <details>
-    <summary>More ▾</summary>
-    <a href="gallery.html">Gallery</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-  </details>
-</nav>
 
   <!-- ====================== BLOG ARTICLE ====================== -->
-  <article class="container" style="max-width:800px; margin:6rem auto; padding:2rem; background:rgba(255,255,255,0.6); border-radius:20px;">
+  <article class="container"
+    style="max-width:800px; margin:6rem auto; padding:2rem; background:rgba(255,255,255,0.6); border-radius:20px;">
     <h1>Google’s Gemini 3 — Rising as a Leading AI Force 🚀</h1>
     <p class="meta"><i class="fas fa-calendar"></i> November 28, 2025 • 4 min read</p>
-    <img src="../assets/blog/gemini3.jpg" alt="Google Gemini 3 AI Model" style="width:100%; border-radius:12px; margin:1.5rem 0;">
+    <img src="../assets/blog/gemini3.jpg" alt="Google Gemini 3 AI Model"
+      style="width:100%; border-radius:12px; margin:1.5rem 0;">
 
-    <p><strong>Google’s Gemini 3</strong> has taken the world by storm as one of the most advanced artificial intelligence models released in recent years. Unlike traditional AI systems, Gemini 3 combines text, speech, images, video, and even code processing — bringing true <span style="color:#d400ff;font-weight:bold;">multimodal intelligence</span> to real-world applications.</p>
+    <p><strong>Google’s Gemini 3</strong> has taken the world by storm as one of the most advanced artificial
+      intelligence models released in recent years. Unlike traditional AI systems, Gemini 3 combines text, speech,
+      images, video, and even code processing — bringing true <span style="color:#d400ff;font-weight:bold;">multimodal
+        intelligence</span> to real-world applications.</p>
 
-    <p>With its powerful real-time reasoning capability, Gemini 3 can understand context, solve complex problems, generate high-quality content, and support business automation. This makes it a game-changer for developers, enterprises, educators, and creators who want to build smarter products and services.</p>
+    <p>With its powerful real-time reasoning capability, Gemini 3 can understand context, solve complex problems,
+      generate high-quality content, and support business automation. This makes it a game-changer for developers,
+      enterprises, educators, and creators who want to build smarter products and services.</p>
 
     <h2>Why Gemini 3 Matters 🌐</h2>
-    <p>Gemini 3 stands out for its impressive accuracy, high-quality code generation, natural conversations, and strong performance in benchmarks across language, vision, and reasoning tasks. It is designed to handle everything from software automation and knowledge assistants to data analysis and smart learning platforms.</p>
+    <p>Gemini 3 stands out for its impressive accuracy, high-quality code generation, natural conversations, and strong
+      performance in benchmarks across language, vision, and reasoning tasks. It is designed to handle everything from
+      software automation and knowledge assistants to data analysis and smart learning platforms.</p>
 
     <h2>Industries That Will Transform 🚀</h2>
-    <p>AI models like Gemini 3 will deeply impact industries such as education, healthcare, finance, e-learning, marketing, analytics, and SaaS automation. Businesses can use it to build chatbots, support tools, copilots for coding, research assistants, training platforms, and more — all while reducing manual workload.</p>
+    <p>AI models like Gemini 3 will deeply impact industries such as education, healthcare, finance, e-learning,
+      marketing, analytics, and SaaS automation. Businesses can use it to build chatbots, support tools, copilots for
+      coding, research assistants, training platforms, and more — all while reducing manual workload.</p>
 
-    <p>Early reports suggest that hundreds of companies are already experimenting with Gemini-powered tools to optimize operations and build new digital products. As access becomes easier through APIs and integrations, even small startups and agencies will be able to take advantage of this technology.</p>
+    <p>Early reports suggest that hundreds of companies are already experimenting with Gemini-powered tools to optimize
+      operations and build new digital products. As access becomes easier through APIs and integrations, even small
+      startups and agencies will be able to take advantage of this technology.</p>
 
-    <p>Industry analysts believe that adopting models like Gemini 3 could help AI-first businesses reduce operational costs, speed up development, and deliver more personalised user experiences — especially in sectors like fintech, edtech, and healthtech.</p>
+    <p>Industry analysts believe that adopting models like Gemini 3 could help AI-first businesses reduce operational
+      costs, speed up development, and deliver more personalised user experiences — especially in sectors like fintech,
+      edtech, and healthtech.</p>
 
     <blockquote style="border-left:4px solid #ffd14a; padding-left:1rem; margin:1.5rem 0; font-style:italic;">
       “Gemini 3 is not just improving artificial intelligence — it is redefining what’s possible with technology.”
     </blockquote>
 
-    <p>The AI revolution is accelerating, and Gemini 3 is clearly one of the leading forces in this new era. Follow our <a href="../blog.html" style="color:#216892;font-weight:bold;">blog</a> for more updates on how AI is transforming learning, business, and innovation — and how you can be part of it.</p>
+    <p>The AI revolution is accelerating, and Gemini 3 is clearly one of the leading forces in this new era. Follow our
+      <a href="../blog.html" style="color:#216892;font-weight:bold;">blog</a> for more updates on how AI is transforming
+      learning, business, and innovation — and how you can be part of it.
+    </p>
 
     <a href="../blog.html" style="color:#216892; font-weight:bold;">← Back to Blog</a>
   </article>
@@ -156,8 +183,60 @@
     </div>
   </div>
 
+  
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Company Info -->
+      <div class="footer-col">
+        <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+        <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+        <p>Empowering innovation through technology & training.</p>
+        <div class="contact-details" style="margin-top: 15px; font-size: 0.9em; color: #ccc;">
+          <p><i class="fas fa-map-marker-alt"></i> Gopal Colony, Pidamaneri, Dharmapuri, TN 636701</p>
+          <p><i class="fas fa-phone"></i> +91 81222 88855</p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="../index.html#home">Home</a>
+        <a href="../courses.html">Courses</a>
+        <a href="../products.html">Products</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About</a>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://twitter.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+
   <!-- Scripts -->
   <script src="../home.js"></script>
-  <script src="mobile-menu.js"></script>
+  <script src="../mobile-menu.js"></script>
 </body>
+
 </html>

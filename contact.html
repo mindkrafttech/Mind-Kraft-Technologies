@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<link rel="canonical" href="https://www.mindkrafttech.com/contact.html">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-DJ2X3MDF1S');
-</script>
+<head>
+  <link rel="canonical" href="https://www.mindkrafttech.com/contact.html">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DJ2X3MDF1S');
+  </script>
 
 
   <!-- ✅ Favicon -->
-<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <meta charset="UTF-8" />
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | MIND KRAFT TECHNOLOGIES</title>
+  <title>Contact Us | Mind Kraft Technologies | Dharmapuri</title>
+  <meta name="description"
+    content="Get in touch with Mind Kraft Technologies. Visit us in Dharmapuri or call us for Web Development and AI Training inquiries. +91 81222 88855.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mindkrafttech.com/">
+  <meta property="og:title" content="Contact Us | Mind Kraft Technologies | Dharmapuri">
+  <meta property="og:description"
+    content="Get in touch with Mind Kraft Technologies. Visit us in Dharmapuri or call us for Web Development and AI Training inquiries. +91 81222 88855.">
+  <meta property="og:image" content="https://www.mindkrafttech.com/assets/icons/favicon.png">
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
   <!-- ====================== ANIMATED BACKGROUND ====================== -->
@@ -30,58 +46,58 @@
     <div id="stars"></div>
   </div>
 
-<!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
-<header class="site-header desktop-only">
-  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
-  <nav class="nav-menu">
-    <a href="index.html#home" class="nav-link">Home</a>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
-    <a href="products.html" class="nav-link">Products</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="courses.html" class="nav-link">Courses</a>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="about.html" class="nav-link">About</a>
-    <!-- Dropdown Menu -->
-    <div class="dropdown">
-      <a href="#" class="nav-link dropbtn">More</a>
-      <div class="dropdown-content">
-        <a href="gallery.html">Gallery</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
+  <!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
+  <header class="site-header desktop-only">
+    <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+    <nav class="nav-menu">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#" class="nav-link dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <!-- ====================== MOBILE HEADER ====================== -->
+  <header class="mobile-header">
+    <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- ====================== MOBILE SIDEBAR ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#testimonials">Testimonials</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="courses.html">Courses</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+
+    <details>
+      <summary>More ▾</summary>
+      <a href="gallery.html">Gallery</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </details>
   </nav>
-</header>
-
-<!-- ====================== MOBILE HEADER ====================== -->
-<header class="mobile-header">
-  <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-    <i class="fas fa-bars"></i>
-  </button>
-</header>
-
-<!-- ====================== MOBILE SIDEBAR ====================== -->
-<nav class="mobile-menu" id="mobileMenu">
-  <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
-
-  <a href="index.html#home">Home</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#testimonials">Testimonials</a>
-  <a href="products.html">Products</a>
-  <a href="contact.html">Contact</a>
-  <a href="courses.html">Courses</a>
-  <a href="blog.html">Blog</a>
-  <a href="about.html">About</a>
-
-  <details>
-    <summary>More ▾</summary>
-    <a href="gallery.html">Gallery</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-  </details>
-</nav>
 
   <!-- ====================== CONTACT HERO ====================== -->
   <section class="contact-hero">
@@ -98,11 +114,8 @@
         <h2>Send Us a Message</h2>
         <p>Fill in the details below and we'll get back to you within 24 hours.</p>
       </div>
-      <div class="visme_d" 
-           data-title="Event Contact Form" 
-           data-url="33pmmn0r-untitled-project" 
-           data-domain="forms" 
-           data-form-id="153582">
+      <div class="visme_d" data-title="Event Contact Form" data-url="33pmmn0r-untitled-project" data-domain="forms"
+        data-form-id="153582">
       </div>
       <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
     </div>
@@ -114,16 +127,20 @@
       <div class="social-contact">
         <h3>Connect With Us</h3>
         <div class="social-icons">
-          <a href="https://www.facebook.com/share/1BR1yCxLHb/" target="_blank" class="social-btn fb" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/1BR1yCxLHb/" target="_blank" rel="noopener noreferrer"
+            class="social-btn fb" aria-label="Facebook">
             <img src="assets/icons/facebook.png" alt="Facebook" width="40" height="40">
           </a>
-          <a href="https://www.instagram.com/mindkrafttech" target="_blank" class="social-btn ig" aria-label="Instagram">
+          <a href="https://www.instagram.com/mindkrafttech" target="_blank" rel="noopener noreferrer"
+            class="social-btn ig" aria-label="Instagram">
             <img src="assets/icons/instagram.png" alt="Instagram" width="40" height="40">
           </a>
-          <a href="https://twitter.com/mindkrafttech" target="_blank" class="social-btn tw" aria-label="Twitter">
+          <a href="https://twitter.com/mindkrafttech" target="_blank" rel="noopener noreferrer" class="social-btn tw"
+            aria-label="Twitter">
             <img src="assets/icons/twitter.png" alt="Twitter" width="40" height="40">
           </a>
-          <a href="https://wa.me/message/XI3IPCSH3JCSG1" target="_blank" class="social-btn wa" aria-label="WhatsApp">
+          <a href="https://wa.me/message/XI3IPCSH3JCSG1" target="_blank" rel="noopener noreferrer" class="social-btn wa"
+            aria-label="WhatsApp">
             <img src="assets/icons/whatsapp.png" alt="WhatsApp" width="40" height="40">
           </a>
         </div>
@@ -131,8 +148,8 @@
       <div class="map-contact">
         <h3>Our Location</h3>
         <div class="map-wrapper">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7368668268787!2d78.1513392736566!3d12.130147832770412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x806f240e62de7e59%3A0x6fdb7959ed1b7a20!2sMind%20Kraft%20Technologies!5e0!3m2!1sen!2sin!4v1762335263307!5m2!1sen!2sin" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7368668268787!2d78.1513392736566!3d12.130147832770412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x806f240e62de7e59%3A0x6fdb7959ed1b7a20!2sMind%20Kraft%20Technologies!5e0!3m2!1sen!2sin!4v1762335263307!5m2!1sen!2sin"
             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
@@ -147,76 +164,77 @@
   </section>
 
   <!-- ====================== FOOTER ====================== -->
-<footer class="site-footer">
-  <div class="container footer-grid">
+  <footer class="site-footer">
+    <div class="container footer-grid">
 
-    <!-- Company Info -->
-    <div class="footer-col">
-      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
-      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
-      <p>Empowering innovation through technology & training.</p>
+      <!-- Company Info -->
+      <div class="footer-col">
+        <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+        <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+        <p>Empowering innovation through technology & training.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html#home">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://twitter.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="index.html#home">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="products.html">Products</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
+    <div class="footer-bottom">
+      <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
     </div>
-
-    <!-- Legal -->
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
-      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
-      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
   <!-- ====================== SCRIPT ====================== -->
   <script src="home.js"></script>
   <!-- SCROLL TO TOP BUTTON -->
-<button class="scroll-to-top" aria-label="Scroll to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-<!-- TECHY SEARCH BUTTON + MODAL -->
-<div class="search-trigger" id="searchTrigger">
-  <div class="radar-circle"></div>
-  <div class="radar-circle"></div>
-  <i class="fas fa-search"></i>
-  <span>SEARCH</span>
-</div>
-
-<!-- MODAL – FIXED ID -->
-<div class="search-modal" id="searchModal">
-  <div class="search-container">
-    <div class="search-header">
-      <i class="fas fa-terminal"></i>
-      <span>MIND KRAFT SEARCH</span>
-      <button class="close-search">×</button>
-    </div>
-    <input type="text" id="searchInput" placeholder="Type to search courses, blog, services..." autocomplete="off">
-    <div class="search-results" id="searchResults"></div>
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <!-- TECHY SEARCH BUTTON + MODAL -->
+  <div class="search-trigger" id="searchTrigger">
+    <div class="radar-circle"></div>
+    <div class="radar-circle"></div>
+    <i class="fas fa-search"></i>
+    <span>SEARCH</span>
   </div>
-</div>
-<script src="mobile-menu.js"></script>
+
+  <!-- MODAL – FIXED ID -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-container">
+      <div class="search-header">
+        <i class="fas fa-terminal"></i>
+        <span>MIND KRAFT SEARCH</span>
+        <button class="close-search">×</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type to search courses, blog, services..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <script src="mobile-menu.js"></script>
 </body>
+
 </html>

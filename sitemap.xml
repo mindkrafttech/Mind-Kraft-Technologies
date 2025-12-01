@@ -1,102 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mindkrafttech.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/index.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/about.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
-
-<url>
-  <loc>https://www.mindkrafttech.com/</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/products.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/index.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/contact.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/courses.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/blog.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/about.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/gallery.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/privacy.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/terms.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/contact.html?interest=Web+Design+Demo</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/contact.html?interest=AI+Automation+Demo</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/contact.html?interest=E-commerce+Demo</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/contact.html?interest=Free+Demo+Now</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/blog/react-hooks-2025.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/blog/gemini-3-ai.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/blog/nvidia-ai-chip-competition.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mindkrafttech.com/blog/ai-cloud-investment.html</loc>
-  <lastmod>2025-11-28T06:39:35+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+    <loc>https://www.mindkrafttech.com/products.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/courses.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/blog.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/contact.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/gallery.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/privacy.html</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/terms.html</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/blog/ai-cloud-investment.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/blog/gemini-3-ai.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/blog/nvidia-ai-chip-competition.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.mindkrafttech.com/blog/react-hooks-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

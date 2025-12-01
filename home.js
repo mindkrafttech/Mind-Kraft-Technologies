@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (sun && bg) {
     const phases = [
-      { pct: 0,   sky: '#aee7fa', sunY: '15vh', sunX: '20vw', sunGlow: '#ffe053e7', stars: 0 },
-      { pct: 25,  sky: '#87CEEB', sunY: '10vh', sunX: '50vw', sunGlow: '#ffec70',   stars: 0 },
-      { pct: 50,  sky: '#fdb44f', sunY: '25vh', sunX: '80vw', sunGlow: '#ffc700',   stars: 0 },
-      { pct: 75,  sky: '#ff7e5f', sunY: '45vh', sunX: '90vw', sunGlow: '#ff6b6b',   stars: 0.3 },
-      { pct: 100, sky: '#1a2a44', sunY: '80vh', sunX: '95vw', sunGlow: '#2c3e50',   stars: 1 }
+      { pct: 0, sky: '#aee7fa', sunY: '15vh', sunX: '20vw', sunGlow: '#ffe053e7', stars: 0 },
+      { pct: 25, sky: '#87CEEB', sunY: '10vh', sunX: '50vw', sunGlow: '#ffec70', stars: 0 },
+      { pct: 50, sky: '#fdb44f', sunY: '25vh', sunX: '80vw', sunGlow: '#ffc700', stars: 0 },
+      { pct: 75, sky: '#ff7e5f', sunY: '45vh', sunX: '90vw', sunGlow: '#ff6b6b', stars: 0.3 },
+      { pct: 100, sky: '#1a2a44', sunY: '80vh', sunX: '95vw', sunGlow: '#2c3e50', stars: 1 }
     ];
 
     function updateDayCycle() {
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let current = phases[0], next = phases[1];
       for (let i = 0; i < phases.length - 1; i++) {
-        if (progress >= phases[i].pct && progress <= phases[i+1].pct) {
+        if (progress >= phases[i].pct && progress <= phases[i + 1].pct) {
           current = phases[i];
-          next = phases[i+1];
+          next = phases[i + 1];
           break;
         }
       }
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const lerp = (a, b, t) => a + (b - a) * t;
       const lerpColor = (c1, c2, t) => {
         const h1 = c1.slice(1), h2 = c2.slice(1);
-        const r = Math.round(parseInt(h1.substr(0,2),16)*(1-t) + parseInt(h2.substr(0,2),16)*t);
-        const g = Math.round(parseInt(h1.substr(2,2),16)*(1-t) + parseInt(h2.substr(2,2),16)*t);
-        const b = Math.round(parseInt(h1.substr(4,2),16)*(1-t) + parseInt(h2.substr(4,2),16)*t);
-        return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+        const r = Math.round(parseInt(h1.substr(0, 2), 16) * (1 - t) + parseInt(h2.substr(0, 2), 16) * t);
+        const g = Math.round(parseInt(h1.substr(2, 2), 16) * (1 - t) + parseInt(h2.substr(2, 2), 16) * t);
+        const b = Math.round(parseInt(h1.substr(4, 2), 16) * (1 - t) + parseInt(h2.substr(4, 2), 16) * t);
+        return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
       };
 
       const sky = lerpColor(current.sky, next.sky, t);
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateDayCycle);
     updateDayCycle();
   }
-    // ====================== SCROLL-TO-TOP BUTTON ======================
+  // ====================== SCROLL-TO-TOP BUTTON ======================
   const scrollBtn = document.querySelector('.scroll-to-top');
 
   if (scrollBtn) {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-  // ====================== TECHY SEARCH MODAL – SITE-WIDE SEARCH ======================
+// ====================== TECHY SEARCH MODAL – SITE-WIDE SEARCH ======================
 document.addEventListener("DOMContentLoaded", () => {
   const searchTrigger = document.getElementById('searchTrigger');
   const searchModal = document.getElementById('searchModal');
@@ -116,19 +116,21 @@ document.addEventListener("DOMContentLoaded", () => {
     "about.html",
     "contact.html",
     "courses.html",
-    "blog.html",
-    "services.html"
+    "blog.html"
   ];
 
   // Fetch and cache page content
   const siteContent = {};
+  const isBlog = window.location.pathname.includes('/blog/');
+
   pages.forEach(page => {
-    fetch(page)
+    const fetchPath = isBlog ? `../${page}` : page;
+    fetch(fetchPath)
       .then(res => res.text())
       .then(html => {
-        const temp = document.createElement("div");
-        temp.innerHTML = html;
-        siteContent[page] = temp.innerText.toLowerCase();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        siteContent[page] = doc.body.innerText.toLowerCase();
       })
       .catch(err => console.warn(`Failed to load ${page}`, err));
   });
@@ -188,101 +190,115 @@ let currentCourse = '';
 let currentPrice = 0;
 
 // Open modal
-enrollBtns.forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.preventDefault();
-    currentCourse = btn.getAttribute('data-course');
-    currentPrice = parseInt(btn.getAttribute('data-price'));
-    
-    selectedCourseEl.textContent = `Course: ${currentCourse}`;
-    displayPriceEl.textContent = `₹${currentPrice.toLocaleString()}`;
-    
-    enrollModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+if (enrollBtns) {
+  enrollBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      currentCourse = btn.getAttribute('data-course');
+      currentPrice = parseInt(btn.getAttribute('data-price'));
+
+      if (selectedCourseEl) selectedCourseEl.textContent = `Course: ${currentCourse}`;
+      if (displayPriceEl) displayPriceEl.textContent = `₹${currentPrice.toLocaleString()}`;
+
+      if (enrollModal) {
+        enrollModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
   });
-});
+}
 
 // Close modal
-closeEnroll.onclick = () => {
-  enrollModal.classList.remove('active');
-  document.body.style.overflow = '';
-  enrollForm.reset();
-  successMessage.style.display = 'none';
-  enrollForm.style.display = 'block';
-};
+if (closeEnroll) {
+  closeEnroll.onclick = () => {
+    if (enrollModal) enrollModal.classList.remove('active');
+    document.body.style.overflow = '';
+    if (enrollForm) {
+      enrollForm.reset();
+      enrollForm.style.display = 'block';
+    }
+    if (successMessage) successMessage.style.display = 'none';
+  };
+}
 
 // Submit form
-enrollForm.onsubmit = async e => {
-  e.preventDefault();
-  
-  const formData = new FormData(enrollForm);
-  const data = {
-    name: formData.get('name'),
-    email: formData.get('email'),
-    mobile: formData.get('mobile'),
-    profession: formData.get('profession'),
-    course: currentCourse,
-    price: currentPrice,
-    timestamp: new Date().toISOString()
-  };
+if (enrollForm) {
+  enrollForm.onsubmit = async e => {
+    e.preventDefault();
 
-  const options = {
-    key: "rzp_live_RdB5ubw9QiTwIb",
-    amount: currentPrice * 100,
-    currency: "INR",
-    name: "MIND KRAFT TECHNOLOGIES",
-    description: currentCourse,
-    handler: async function (response) {
-      data.payment_id = response.razorpay_payment_id;
+    const formData = new FormData(enrollForm);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      mobile: formData.get('mobile'),
+      profession: formData.get('profession'),
+      course: currentCourse,
+      price: currentPrice,
+      timestamp: new Date().toISOString()
+    };
 
-      // ✅ 1. SEND TO GOOGLE SHEETS (FORM-DATA)
-      try {
-        const sheetsData = new URLSearchParams();
-        for (const key in data) {
-          sheetsData.append(key, data[key]);
-        }
-        sheetsData.append('payment_id', data.payment_id); // Ensure payment_id is added
+    const options = {
+      key: "rzp_live_RdB5ubw9QiTwIb",
+      amount: currentPrice * 100,
+      currency: "INR",
+      name: "MIND KRAFT TECHNOLOGIES",
+      description: currentCourse,
+      handler: async function (response) {
+        data.payment_id = response.razorpay_payment_id;
 
-        const sheetsRes = await fetch("https://script.google.com/macros/s/AKfycbzHkY83n6-7Zl9-OXX1hVKofT-eLSQDGRptk2hq9zZNwIUURXIyH_fFHUEVoAf8PgdSwg/exec", {
-          method: "POST",
-          body: sheetsData,  // ← FORM-DATA
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+        // ✅ 1. SEND TO GOOGLE SHEETS (FORM-DATA)
+        try {
+          const sheetsData = new URLSearchParams();
+          for (const key in data) {
+            sheetsData.append(key, data[key]);
           }
-        });
-        const sheetsText = await sheetsRes.text();
-        console.log("Google Sheets Response:", sheetsText);
-      } catch (err) {
-        console.error("Google Sheets webhook failed:", err);
-      }
+          sheetsData.append('payment_id', data.payment_id); // Ensure payment_id is added
 
-      // ✅ 3. SUCCESS MESSAGE
-      enrollForm.style.display = 'none';
-      successMessage.style.display = 'block';
-      successMessage.innerHTML = `
-        <i class="fas fa-check-circle"></i>
-        <h3>Enrollment Confirmed!</h3>
-        <p>Payment ID: <strong>${data.payment_id}</strong></p>
-        <p>Data saved & email sent!</p>
-      `;
+          const sheetsRes = await fetch("https://script.google.com/macros/s/AKfycbzHkY83n6-7Zl9-OXX1hVKofT-eLSQDGRptk2hq9zZNwIUURXIyH_fFHUEVoAf8PgdSwg/exec", {
+            method: "POST",
+            body: sheetsData,  // ← FORM-DATA
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
+          });
+          const sheetsText = await sheetsRes.text();
+          console.log("Google Sheets Response:", sheetsText);
+        } catch (err) {
+          console.error("Google Sheets webhook failed:", err);
+        }
 
-      // Auto-close
-      setTimeout(() => {
-        enrollModal.classList.remove('active');
-        document.body.style.overflow = '';
-        enrollForm.reset();
-        successMessage.style.display = 'none';
-        enrollForm.style.display = 'block';
-      }, 6000);
-    },
-    prefill: {
-      name: data.name,
-      email: data.email,
-      contact: data.mobile
-    },
-    theme: { color: "#216892" }
+        // ✅ 3. SUCCESS MESSAGE
+        if (enrollForm) enrollForm.style.display = 'none';
+        if (successMessage) {
+          successMessage.style.display = 'block';
+          successMessage.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <h3>Enrollment Confirmed!</h3>
+            <p>Payment ID: <strong>${data.payment_id}</strong></p>
+            <p>Data saved & email sent!</p>
+          `;
+        }
+
+        // Auto-close
+        setTimeout(() => {
+          if (enrollModal) enrollModal.classList.remove('active');
+          document.body.style.overflow = '';
+          if (enrollForm) {
+            enrollForm.reset();
+            enrollForm.style.display = 'block';
+          }
+          if (successMessage) successMessage.style.display = 'none';
+        }, 6000);
+      },
+      prefill: {
+        name: data.name,
+        email: data.email,
+        contact: data.mobile
+      },
+      theme: { color: "#216892" }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.open();
   };
-
-  const rzp = new Razorpay(options);
-  rzp.open();
-};
+}

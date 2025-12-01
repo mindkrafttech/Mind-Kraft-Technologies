@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-DJ2X3MDF1S');
-</script>
+    gtag('config', 'G-DJ2X3MDF1S');
+  </script>
 
 
   <meta charset="UTF-8" />
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Products & Services | MIND KRAFT TECHNOLOGIES</title>
+  <title>Our Products & Services | Mind Kraft Technologies</title>
+  <link rel="canonical" href="https://www.mindkrafttech.com/products.html">
+  <meta name="description" content="Explore our range of digital products and services including Web Development, CRM, and AI Solutions tailored for your business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mindkrafttech.com/">
+  <meta property="og:title" content="Our Products & Services | Mind Kraft Technologies">
+  <meta property="og:description" content="Explore our range of digital products and services including Web Development, CRM, and AI Solutions tailored for your business.">
+  <meta property="og:image" content="https://www.mindkrafttech.com/assets/icons/favicon.png">
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
+
 <body>
 
   <!-- ====================== ANIMATED BACKGROUND ====================== -->
@@ -29,58 +43,58 @@
     <div id="stars"></div>
   </div>
 
-<!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
-<header class="site-header desktop-only">
-  <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
-  <nav class="nav-menu">
-    <a href="index.html#home" class="nav-link">Home</a>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
-    <a href="products.html" class="nav-link">Products</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="courses.html" class="nav-link">Courses</a>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="about.html" class="nav-link">About</a>
-    <!-- Dropdown Menu -->
-    <div class="dropdown">
-      <a href="#" class="nav-link dropbtn">More</a>
-      <div class="dropdown-content">
-        <a href="gallery.html">Gallery</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
+  <!-- ====================== DESKTOP HEADER (HIDDEN ON MOBILE) ====================== -->
+  <header class="site-header desktop-only">
+    <div class="logo">MIND KRAFT <span>TECHNOLOGIES</span></div>
+    <nav class="nav-menu">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#" class="nav-link dropbtn">More</a>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <!-- ====================== MOBILE HEADER ====================== -->
+  <header class="mobile-header">
+    <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- ====================== MOBILE SIDEBAR ====================== -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#testimonials">Testimonials</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="courses.html">Courses</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+
+    <details>
+      <summary>More ▾</summary>
+      <a href="gallery.html">Gallery</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+    </details>
   </nav>
-</header>
-
-<!-- ====================== MOBILE HEADER ====================== -->
-<header class="mobile-header">
-  <div class="mobile-logo">MIND KRAFT <span>TECH</span></div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-    <i class="fas fa-bars"></i>
-  </button>
-</header>
-
-<!-- ====================== MOBILE SIDEBAR ====================== -->
-<nav class="mobile-menu" id="mobileMenu">
-  <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
-
-  <a href="index.html#home">Home</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#testimonials">Testimonials</a>
-  <a href="products.html">Products</a>
-  <a href="contact.html">Contact</a>
-  <a href="courses.html">Courses</a>
-  <a href="blog.html">Blog</a>
-  <a href="about.html">About</a>
-
-  <details>
-    <summary>More ▾</summary>
-    <a href="gallery.html">Gallery</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-  </details>
-</nav>
 
   <!-- ====================== PRODUCTS HERO ====================== -->
   <section class="products-hero">
@@ -98,7 +112,8 @@
         <!-- Product 1: Web Design -->
         <div class="product-card">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Custom Web Design">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+              alt="Custom Web Design">
           </div>
           <div class="product-content">
             <h3>Custom Web Design & Development</h3>
@@ -114,12 +129,13 @@
               <i class="fas fa-play-circle"></i> Get Free Demo
             </a>
           </div>
-  </div>
+        </div>
 
         <!-- Product 2: AI Automation -->
         <div class="product-card">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1676299081408-27099a3e44e6?q=80&w=2070&auto=format&fit=crop" alt="AI & Automation">
+            <img src="https://images.unsplash.com/photo-1676299081408-27099a3e44e6?q=80&w=2070&auto=format&fit=crop"
+              alt="AI & Automation">
           </div>
           <div class="product-content">
             <h3>AI-Powered Automation Tools</h3>
@@ -140,7 +156,8 @@
         <!-- Product 3: E-commerce -->
         <div class="product-card">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop" alt="E-commerce Website">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop"
+              alt="E-commerce Website">
           </div>
           <div class="product-content">
             <h3>Full E-commerce Website + App</h3>
@@ -176,56 +193,64 @@
 
   <!-- ====================== WHATSAPP FLOATING BUTTON ====================== -->
   <section class="whatsapp-cta">
-    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! I want a FREE demo for Web/AI/E-commerce" target="_blank" class="whatsapp-btn">
-      <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.446.099-.148.05-.272-.025-.396-.074-.124-.67-.297-.916-.297-.074 0-.198-.025-.297-.025-.297 0-1.256.149-1.554.446-.297.297-.893 1.256-.893 2.46 0 1.206.867 2.367 1.14 2.615.273.248 2.392 3.645 5.807 5.106 2.984 1.27 3.645.99 4.008.867.446-.149 1.42-.743 1.618-1.413.198-.669.198-1.24.149-1.364-.05-.124-.198-.198-.446-.297zM12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.525 1.333 5L2 22l5.182-1.333C9.475 21.513 11.18 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.392 16.382c-.198.297-.644.446-1.04.446-.446 0-1.413-.248-2.059-.743-.644-.496-1.413-1.19-1.91-1.91-.496-.719-.893-1.488-.893-2.307 0-.818.297-1.488.893-2.059.595-.57 1.364-.867 2.158-.867.793 0 1.562.297 2.158.867.595.57.893 1.24.893 2.059 0 .818-.298 1.587-.893 2.307-.595.719-1.364 1.413-2.158 1.91z"/></svg>
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! I want a FREE demo for Web/AI/E-commerce" target="_blank" rel="noopener noreferrer"
+      class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" class="wa-icon">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.446.099-.148.05-.272-.025-.396-.074-.124-.67-.297-.916-.297-.074 0-.198-.025-.297-.025-.297 0-1.256.149-1.554.446-.297.297-.893 1.256-.893 2.46 0 1.206.867 2.367 1.14 2.615.273.248 2.392 3.645 5.807 5.106 2.984 1.27 3.645.99 4.008.867.446-.149 1.42-.743 1.618-1.413.198-.669.198-1.24.149-1.364-.05-.124-.198-.198-.446-.297zM12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.525 1.333 5L2 22l5.182-1.333C9.475 21.513 11.18 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.392 16.382c-.198.297-.644.446-1.04.446-.446 0-1.413-.248-2.059-.743-.644-.496-1.413-1.19-1.91-1.91-.496-.719-.893-1.488-.893-2.307 0-.818.297-1.488.893-2.059.595-.57 1.364-.867 2.158-.867.793 0 1.562.297 2.158.867.595.57.893 1.24.893 2.059 0 .818-.298 1.587-.893 2.307-.595.719-1.364 1.413-2.158 1.91z" />
+      </svg>
       Instant Demo on WhatsApp
     </a>
   </section>
 
   <!-- ====================== FOOTER ====================== -->
-<footer class="site-footer">
-  <div class="container footer-grid">
+  <footer class="site-footer">
+    <div class="container footer-grid">
 
-    <!-- Company Info -->
-    <div class="footer-col">
-      <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
-      <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
-      <p>Empowering innovation through technology & training.</p>
+      <!-- Company Info -->
+      <div class="footer-col">
+        <h3>MIND KRAFT <span>TECHNOLOGIES</span></h3>
+        <p>Founded 2025 • CEO: <strong>S.B. Sachin</strong></p>
+        <p>Empowering innovation through technology & training.</p>
+        <div class="contact-details" style="margin-top: 15px; font-size: 0.9em; color: #ccc;">
+          <p><i class="fas fa-map-marker-alt"></i> Gopal Colony, Pidamaneri, Dharmapuri, TN 636701</p>
+          <p><i class="fas fa-phone"></i> +91 81222 88855</p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html#home">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://twitter.com/mindkrafttech" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="index.html#home">Home</a>
-      <a href="courses.html">Courses</a>
-      <a href="products.html">Products</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
+    <div class="footer-bottom">
+      <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
     </div>
-
-    <!-- Legal -->
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <a href="https://facebook.com/share/1BR1yCxLHb/" target="_blank">Facebook</a>
-      <a href="https://instagram.com/mindkrafttech" target="_blank">Instagram</a>
-      <a href="https://twitter.com/mindkrafttech" target="_blank">Twitter</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 MIND KRAFT TECHNOLOGIES. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
   <!-- ====================== SCROLL TO TOP ====================== -->
   <button class="scroll-to-top" aria-label="Scroll to top">
@@ -253,6 +278,7 @@
 
   <!-- ====================== SCRIPT ====================== -->
   <script src="home.js"></script>
-<script src="mobile-menu.js"></script>
+  <script src="mobile-menu.js"></script>
 </body>
+
 </html>
