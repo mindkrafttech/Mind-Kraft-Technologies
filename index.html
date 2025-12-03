@@ -18,7 +18,94 @@
 
   <meta charset="UTF-8" />
   <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Kraft Technologies | Web Development & AI Training</title>
+  <meta name="description"
+    content="Mind Kraft Technologies offers expert Web Development, AI Solutions, and Tech Training in Dharmapuri. 10x your business with our digital services.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mindkrafttech.com/">
+  <meta property="og:title" content="Mind Kraft Technologies | Web Development & AI Training">
+  <meta property="og:description"
+    content="Mind Kraft Technologies offers expert Web Development, AI Solutions, and Tech Training in Dharmapuri. 10x your business with our digital services.">
+  <meta property="og:image" content="https://www.mindkrafttech.com/assets/icons/favicon.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.mindkrafttech.com/">
+  <meta property="twitter:title" content="Mind Kraft Technologies | Web Development & AI Training">
+  <meta property="twitter:description"
+    content="Mind Kraft Technologies offers expert Web Development, AI Solutions, and Tech Training in Dharmapuri. 10x your business with our digital services.">
+  <meta property="twitter:image" content="https://www.mindkrafttech.com/assets/icons/favicon.png">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.mindkrafttech.com/#organization",
+        "name": "Mind Kraft Technologies",
+        "url": "https://www.mindkrafttech.com/",
+        "logo": "https://www.mindkrafttech.com/assets/icons/favicon.png",
+        "sameAs": [
+          "https://facebook.com/share/1BR1yCxLHb/",
+          "https://instagram.com/mindkrafttech",
+          "https://twitter.com/mindkrafttech"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "parentOrganization": { "@id": "https://www.mindkrafttech.com/#organization" },
+        "name": "Mind Kraft Technologies",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gopal Colony, Pidamaneri",
+          "addressLocality": "Dharmapuri",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "636701",
+          "addressCountry": "IN"
+        },
+        "telephone": "+918122288855",
+        "url": "https://www.mindkrafttech.com/",
+        "priceRange": "$$"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mindkrafttech.com/#website",
+        "url": "https://www.mindkrafttech.com/",
+        "name": "Mind Kraft Technologies",
+        "description": "Empowering Innovation Through Technology & Training",
+        "publisher": { "@id": "https://www.mindkrafttech.com/#organization" }
+      }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="canonical" href="https://www.mindkrafttech.com/">
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ2X3MDF1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DJ2X3MDF1S');
+  </script>
+
+
+  <meta charset="UTF-8" />
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https: data:;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,7 +177,10 @@
   <link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="project-popup.css" />
+</head>
 
+<body>
   <!-- ====================== ANIMATED BACKGROUND ====================== -->
   <div id="bg-animation">
     <div id="sun"></div>
@@ -172,7 +262,7 @@
       <div class="cta-group">
         <a href="products.html" class="btn-primary pulse">Explore Services</a>
         <a href="courses.html" class="btn-primary outline pulse">Enroll in Course</a>
-        <a href="#projects" class="btn-primary glow pulse">Get a Project</a>
+        <a href="#projects" id="getProjectBtn" class="btn-primary glow pulse">Get a Project</a>
       </div>
     </div>
   </section>
@@ -328,8 +418,8 @@
 
   <!-- ====================== FLOATING ACTION BUTTONS ====================== -->
   <div class="fab-container">
-    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! Let's grow my business!" target="_blank" rel="noopener noreferrer"
-      class="fab-btn fab-whatsapp">
+    <a href="https://wa.me/message/XI3IPCSH3JCSG1?text=Hi! Let's grow my business!" target="_blank"
+      rel="noopener noreferrer" class="fab-btn fab-whatsapp">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="tel:+918122288855" class="fab-btn fab-call">
@@ -403,7 +493,206 @@
     }
   </script>
 
+  <!-- ====================== PROJECT POPUP MODAL ====================== -->
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Final Year Academic Projects</h3>
+        <button class="close-modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+          <h3 class="success-title">Thank you! 🎉</h3>
+          <p class="success-text">Our team will contact you shortly with project titles and guidance details.</p>
+          <p class="success-text" style="margin-top:0.5rem;">For faster assistance, message on WhatsApp
+            <strong>8122288855</strong> or email <strong>contact@mindkrafttech.com</strong>.</p>
+
+          <div id="jitSuccessMsg" class="jit-success" style="display:none;">
+            If you are from Jayalakshmi Institute of Technology, you are eligible for the FREE Project Offer (only
+            hardware / paid software charges apply when required). Our team will contact you soon.
+          </div>
+        </div>
+
+        <!-- Form Content -->
+        <div id="formContent">
+          <div class="offer-box">
+            <strong>Are you a final year student searching for the perfect project?</strong><br>
+            Mind Kraft Technologies provides 100% project support including:
+            <ul>
+              <li>Wide range of latest project titles</li>
+              <li>Affordable pricing for students</li>
+              <li>Complete project development</li>
+              <li>Guidance & explanation for reviews and viva</li>
+              <li>Source code, documentation & demo videos</li>
+            </ul>
+            <div class="special-offer">
+              🎁 Special Offer: Students of Jayalakshmi Institute of Technology get the project FREE of cost. Only the
+              hardware components / paid software cost must be paid (if the selected project requires it).
+            </div>
+          </div>
+
+          <p style="margin-bottom:1.5rem; font-size:0.9rem; color:#64748b;">
+            Fill this form to get the best project for your department and requirements.<br>
+            📞 Contact: 8122288855 | 📧 Email: contact@mindkrafttech.com
+          </p>
+
+          <form id="projectForm">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label">Full Name <span style="color:red">*</span></label>
+              <input type="text" name="fullName" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- College -->
+            <div class="form-group">
+              <label class="form-label">College / University Name <span style="color:red">*</span></label>
+              <input type="text" name="collegeName" class="form-input" placeholder="Enter your college name" required>
+            </div>
+
+            <!-- Department -->
+            <div class="form-group">
+              <label class="form-label">Department <span style="color:red">*</span></label>
+              <select name="department" class="form-select" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            <!-- Degree -->
+            <div class="form-group">
+              <label class="form-label">Degree <span style="color:red">*</span></label>
+              <select name="degree" class="form-select" required>
+                <option value="" disabled selected>Select Degree</option>
+                <option value="BE">BE</option>
+                <option value="BTech">BTech</option>
+                <option value="ME">ME</option>
+                <option value="MTech">MTech</option>
+                <option value="Diploma">Diploma</option>
+                <option value="MCA">MCA</option>
+                <option value="BSc">BSc</option>
+                <option value="MSc">MSc</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            <!-- Year/Semester -->
+            <div class="form-group">
+              <label class="form-label">Final Year / Semester <span style="color:red">*</span></label>
+              <input type="text" name="yearSemester" class="form-input" placeholder="e.g. Final Year / 8th Semester"
+                required>
+            </div>
+
+            <!-- Domain -->
+            <div class="form-group">
+              <label class="form-label">Preferred Project Domain <span style="color:red">*</span></label>
+              <select name="domain" class="form-select" required>
+                <option value="" disabled selected>Select Domain</option>
+                <option value="AI">Artificial Intelligence (AI)</option>
+                <option value="ML">Machine Learning (ML)</option>
+                <option value="IoT">Internet of Things (IoT)</option>
+                <option value="Web Development">Web Development</option>
+                <option value="App Development">App Development</option>
+                <option value="Networking">Networking</option>
+                <option value="Cloud">Cloud Computing</option>
+                <option value="Embedded">Embedded Systems</option>
+                <option value="MATLAB">MATLAB</option>
+                <option value="Python">Python</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            <!-- Project Idea -->
+            <div class="form-group">
+              <label class="form-label">If you already have a project idea / title (Optional)</label>
+              <textarea name="projectIdea" class="form-textarea" placeholder="Describe your idea..."></textarea>
+            </div>
+
+            <!-- Project Type -->
+            <div class="form-group">
+              <label class="form-label">Preferred Project Type <span style="color:red">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="projectType" value="Software" required>
+                  Software</label>
+                <label class="radio-label"><input type="radio" name="projectType" value="Hardware"> Hardware</label>
+                <label class="radio-label"><input type="radio" name="projectType" value="Software + Hardware">
+                  Both</label>
+                <label class="radio-label"><input type="radio" name="projectType" value="Documentation Only"> Docs
+                  Only</label>
+              </div>
+            </div>
+
+            <!-- Deadline -->
+            <div class="form-group">
+              <label class="form-label">Deadline / Submission Date <span style="color:red">*</span></label>
+              <input type="date" name="deadline" class="form-input" required>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="form-group">
+              <label class="form-label">WhatsApp Number <span style="color:red">*</span></label>
+              <input type="tel" name="whatsapp" class="form-input" placeholder="10-digit mobile number"
+                pattern="[0-9]{10}" title="Please enter a valid 10-digit number" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label">Email Address <span style="color:red">*</span></label>
+              <input type="email" name="email" class="form-input" placeholder="yourname@example.com" required>
+            </div>
+
+            <!-- Additional Requirements -->
+            <div class="form-group">
+              <label class="form-label">Additional Requirements (Optional)</label>
+              <textarea name="additionalReq" class="form-textarea"
+                placeholder="Any specific technologies or features needed?"></textarea>
+            </div>
+
+            <!-- JIT Question -->
+            <div class="form-group"
+              style="background:#f0f9ff; padding:1rem; border-radius:8px; border:1px solid #bae6fd;">
+              <label class="form-label">Are you a student of Jayalakshmi Institute of Technology? <span
+                  style="color:red">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="isJitStudent" value="Yes" required> Yes</label>
+                <label class="radio-label"><input type="radio" name="isJitStudent" value="No"> No</label>
+              </div>
+
+              <!-- Upload Section (Hidden by default) -->
+              <div id="jitUploadSection" style="display:none; margin-top:1rem;">
+                <label class="form-label">Upload College ID Card / Bonafide <span style="color:red">*</span></label>
+                <div class="file-upload-box" onclick="document.getElementById('idCardFile').click()">
+                  <i class="fas fa-cloud-upload-alt" style="font-size:2rem; color:#3b82f6; margin-bottom:0.5rem;"></i>
+                  <p id="fileLabel" style="margin:0; font-size:0.9rem; color:#64748b;">Click to upload (Image or PDF)
+                  </p>
+                  <input type="file" id="idCardFile" accept="image/*,.pdf" class="file-input">
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submitBtn" class="submit-btn">
+              Submit Request <i class="fas fa-paper-plane"></i>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="mobile-menu.js" defer></script>
-  </body>
+  <script src="project-popup.js"></script>
+</body>
 
 </html>
