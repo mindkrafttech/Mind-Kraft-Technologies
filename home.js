@@ -302,3 +302,87 @@ if (enrollForm) {
     rzp.open();
   };
 }
+
+// ====================== PORTFOLIO SLIDER ======================
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.slide-track');
+    const items = document.querySelectorAll('.portfolio-item');
+    const prevBtn = document.querySelector('.slider-arrow-left');
+    const nextBtn = document.querySelector('.slider-arrow-right');
+    const slider = document.querySelector('.portfolio-slider');
+
+    if (!track || !items.length || !slider) return;
+
+    let index = 0;
+    const itemWidth = items[0].offsetWidth + 32; // Width + gap (2rem = 32px)
+    const totalItems = items.length;
+    const visibleItems = Math.floor(slider.offsetWidth / itemWidth);
+    const maxIndex = totalItems - visibleItems > 0 ? totalItems - visibleItems : 0;
+
+    // Auto-scroll
+    let autoScrollInterval;
+
+    const startAutoScroll = () => {
+        autoScrollInterval = setInterval(() => {
+            moveSlide('next');
+        }, 3000);
+    };
+
+    const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+    };
+
+    const moveSlide = (direction) => {
+        if (direction === 'next') {
+            index++;
+            if (index > maxIndex) {
+                index = 0; // Loop back to start
+            }
+        } else {
+            index--;
+            if (index < 0) {
+                index = maxIndex; // Loop to end
+            }
+        }
+        updateSlider();
+    };
+
+    const updateSlider = () => {
+        const translateX = -(index * itemWidth);
+        track.style.transform = `translateX(${translateX}px)`;
+    };
+
+    // Event Listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            moveSlide('next');
+            startAutoScroll();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            moveSlide('prev');
+            startAutoScroll();
+        });
+    }
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoScroll);
+    slider.addEventListener('mouseleave', startAutoScroll);
+
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        // Recalculate maxIndex on resize
+        const newVisibleItems = Math.floor(slider.offsetWidth / itemWidth);
+        // Update maxIndex logic if needed, or just reset
+        // For simplicity, we might just reset index to 0 to avoid layout issues
+        index = 0;
+        updateSlider();
+    });
+
+    // Start
+    startAutoScroll();
+});
